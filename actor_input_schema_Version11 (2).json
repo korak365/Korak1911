@@ -1,0 +1,173 @@
+{
+    "title": "Input schema of the TikTok Shop Product Hunter",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "TikTok Shop URLs",
+            "type": "array",
+            "description": "URLs of TikTok Shop categories or search results.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.tiktok.com/shop/browse"
+                }
+            ]
+        },
+        "searchKeywords": {
+            "title": "Search Keywords",
+            "type": "array",
+            "description": "Keywords to search for trending products.",
+            "editor": "json",
+            "default": ["trending", "bestseller", "viral"]
+        },
+        "categories": {
+            "title": "Product Categories",
+            "type": "array",
+            "description": "Categories to focus on (beauty, fashion, electronics, etc).",
+            "editor": "json",
+            "default": ["all"]
+        },
+        "maxProductsToScrape": {
+            "title": "Max Products to Scrape",
+            "type": "integer",
+            "description": "Maximum number of products to collect.",
+            "default": 500
+        },
+        "sortBy": {
+            "title": "Sort By",
+            "type": "string",
+            "description": "How to sort products.",
+            "enum": ["trending", "newest", "bestselling", "price-low", "price-high", "popular"],
+            "default": "trending"
+        },
+        "priceRange": {
+            "title": "Price Range (min-max)",
+            "type": "array",
+            "description": "Filter by price range, e.g., [10, 100].",
+            "editor": "json",
+            "default": [0, 1000]
+        },
+        "extractProductDetails": {
+            "title": "Extract Product Details",
+            "type": "boolean",
+            "description": "Extract detailed product information.",
+            "default": true
+        },
+        "extractSellerInfo": {
+            "title": "Extract Seller Information",
+            "type": "boolean",
+            "description": "Extract seller name, rating, response time.",
+            "default": true
+        },
+        "extractSalesMetrics": {
+            "title": "Extract Sales Metrics",
+            "type": "boolean",
+            "description": "Extract sales volume, reviews, ratings.",
+            "default": true
+        },
+        "extractImages": {
+            "title": "Extract Product Images",
+            "type": "boolean",
+            "description": "Extract product image URLs.",
+            "default": true
+        },
+        "extractReviews": {
+            "title": "Extract Customer Reviews",
+            "type": "boolean",
+            "description": "Extract top reviews and ratings.",
+            "default": true
+        },
+        "maxReviewsPerProduct": {
+            "title": "Max Reviews Per Product",
+            "type": "integer",
+            "description": "Maximum number of reviews to extract per product.",
+            "default": 10
+        },
+        "extractRelatedProducts": {
+            "title": "Extract Related Products",
+            "type": "boolean",
+            "description": "Extract related/recommended products.",
+            "default": true
+        },
+        "trackSalesVelocity": {
+            "title": "Track Sales Velocity",
+            "type": "boolean",
+            "description": "Calculate sales trends and velocity.",
+            "default": true
+        },
+        "detectTrendingIndicators": {
+            "title": "Detect Trending Indicators",
+            "type": "boolean",
+            "description": "Identify indicators like 'new', 'hot', 'limited'.",
+            "default": true
+        },
+        "analyzeCompetitors": {
+            "title": "Analyze Competitors",
+            "type": "boolean",
+            "description": "Compare similar products and track pricing.",
+            "default": true
+        },
+        "extractShippingInfo": {
+            "title": "Extract Shipping Information",
+            "type": "boolean",
+            "description": "Extract shipping costs, delivery time, etc.",
+            "default": true
+        },
+        "extractReturnPolicy": {
+            "title": "Extract Return Policy",
+            "type": "boolean",
+            "description": "Extract return and refund policies.",
+            "default": true
+        },
+        "calculateProfitability": {
+            "title": "Estimate Profitability",
+            "type": "boolean",
+            "description": "Estimate product profitability score.",
+            "default": true
+        },
+        "identifyDropshippingOpportunities": {
+            "title": "Identify Dropshipping Opportunities",
+            "type": "boolean",
+            "description": "Flag products suitable for dropshipping.",
+            "default": true
+        },
+        "trackPriceHistory": {
+            "title": "Track Price History",
+            "type": "boolean",
+            "description": "Track price changes over time.",
+            "default": true
+        },
+        "detectFlashSales": {
+            "title": "Detect Flash Sales",
+            "type": "boolean",
+            "description": "Identify flash sales and limited-time offers.",
+            "default": true
+        },
+        "minProductRating": {
+            "title": "Minimum Product Rating",
+            "type": "number",
+            "description": "Only include products with rating above this.",
+            "default": 4.0
+        },
+        "minReviewCount": {
+            "title": "Minimum Review Count",
+            "type": "integer",
+            "description": "Only include products with at least this many reviews.",
+            "default": 10
+        },
+        "realTimeUpdates": {
+            "title": "Real-Time Updates",
+            "type": "boolean",
+            "description": "Update every 15 minutes for latest trends.",
+            "default": true
+        },
+        "outputFormat": {
+            "title": "Output Format",
+            "type": "string",
+            "description": "Export format for product data.",
+            "enum": ["json", "jsonl", "csv"],
+            "default": "json"
+        }
+    }
+}

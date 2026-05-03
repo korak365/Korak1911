@@ -1,0 +1,154 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "products": {
+            "title": "Trending Products",
+            "transformation": {
+                "fields": ["productId", "name", "price", "sales", "rating", "reviews", "seller", "trending"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productId": {
+                        "label": "Product ID",
+                        "format": "text"
+                    },
+                    "name": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "price": {
+                        "label": "Price",
+                        "format": "number"
+                    },
+                    "sales": {
+                        "label": "Sales",
+                        "format": "number"
+                    },
+                    "rating": {
+                        "label": "Rating",
+                        "format": "number"
+                    },
+                    "reviews": {
+                        "label": "Reviews",
+                        "format": "number"
+                    },
+                    "seller": {
+                        "label": "Seller",
+                        "format": "text"
+                    },
+                    "trending": {
+                        "label": "Trending",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "bestsellers": {
+            "title": "Top Selling Products",
+            "transformation": {
+                "fields": ["productId", "name", "totalSales", "salesVelocity", "price", "margin"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productId": {
+                        "label": "Product ID",
+                        "format": "text"
+                    },
+                    "name": {
+                        "label": "Product",
+                        "format": "text"
+                    },
+                    "totalSales": {
+                        "label": "Total Sales",
+                        "format": "number"
+                    },
+                    "salesVelocity": {
+                        "label": "Sales/Hour",
+                        "format": "number"
+                    },
+                    "price": {
+                        "label": "Price",
+                        "format": "number"
+                    },
+                    "margin": {
+                        "label": "Est. Margin",
+                        "format": "number"
+                    }
+                }
+            }
+        },
+        "sellers": {
+            "title": "Seller Profiles",
+            "transformation": {
+                "fields": ["sellerId", "name", "rating", "totalProducts", "responseTime", "trustLevel"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "sellerId": {
+                        "label": "Seller ID",
+                        "format": "text"
+                    },
+                    "name": {
+                        "label": "Seller Name",
+                        "format": "text"
+                    },
+                    "rating": {
+                        "label": "Rating",
+                        "format": "number"
+                    },
+                    "totalProducts": {
+                        "label": "Products",
+                        "format": "number"
+                    },
+                    "responseTime": {
+                        "label": "Response Time",
+                        "format": "text"
+                    },
+                    "trustLevel": {
+                        "label": "Trust Level",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "opportunities": {
+            "title": "Product Opportunities",
+            "transformation": {
+                "fields": ["productId", "name", "opportunityScore", "reason", "potentialProfit", "competition"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productId": {
+                        "label": "Product ID",
+                        "format": "text"
+                    },
+                    "name": {
+                        "label": "Product",
+                        "format": "text"
+                    },
+                    "opportunityScore": {
+                        "label": "Opportunity Score",
+                        "format": "number"
+                    },
+                    "reason": {
+                        "label": "Why It Matters",
+                        "format": "text"
+                    },
+                    "potentialProfit": {
+                        "label": "Est. Profit",
+                        "format": "number"
+                    },
+                    "competition": {
+                        "label": "Competition Level",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

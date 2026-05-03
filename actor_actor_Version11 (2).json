@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "tiktok-shop-product-hunter-scraper",
+    "title": "TikTok Shop Product Hunter",
+    "description": "Scrapes trending products and sales volume in real-time.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "Claude (Anthropic)"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

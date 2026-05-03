@@ -1,0 +1,41 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the TikTok Shop Product Hunter",
+    "properties": {
+        "trendingProducts": {
+            "type": "string",
+            "title": "Trending Products",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=products"
+        },
+        "topSellingProducts": {
+            "type": "string",
+            "title": "Top Selling Products",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=bestsellers"
+        },
+        "sellerProfiles": {
+            "type": "string",
+            "title": "Seller Profiles",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=sellers"
+        },
+        "productOpportunities": {
+            "type": "string",
+            "title": "Product Opportunities",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=opportunities"
+        },
+        "marketReport": {
+            "type": "string",
+            "title": "Market Intelligence Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=MARKET_REPORT"
+        },
+        "trendingAnalysis": {
+            "type": "string",
+            "title": "Trending Analysis",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=TRENDING_ANALYSIS"
+        },
+        "salesMetrics": {
+            "type": "string",
+            "title": "Sales Metrics",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=SALES_METRICS"
+        }
+    }
+}
